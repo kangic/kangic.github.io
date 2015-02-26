@@ -1,4 +1,10 @@
-## Jekyll
+---
+layout: post
+title:  "new blog!"
+date:   2015-02-27 02:40:10
+categories: life
+---
+
 
 It's a new blog!
 
