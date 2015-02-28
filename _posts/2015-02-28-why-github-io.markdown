@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "github.io로 바꾼 이유"
+title:  "블로그를 github.io로 옮긴 이유"
 date:   2015-02-28 21:29:10
 categories: life
 ---
