@@ -2,7 +2,7 @@
 layout: post
 title:  "c++에서 new 예외 처리"
 date:   2015-02-17 00:12:00
-categories: topcoder
+categories: cpp
 ---
 
 사실 요즘의 PC 환경에서 일반적인 프로그램을 작성할 때 메모리 할당에 대한 예외 처리를 안해도
