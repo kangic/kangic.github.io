@@ -16,10 +16,10 @@ categories: cpp
 * 아무 처리 안함..
 * new로 객체 생성 후 NULL check를 통해 예외 처리
 
-```cpp
+~~~ cpp
 char* test = new test[10000000L];
 if (NULL == test)	// 여기서의 체크는 아무 의미 없다..
-```
+~~~
 
 그러면 어떻게 처리를 해야 할지는 아래를 참고..ㅎㅎ
 
@@ -27,7 +27,7 @@ if (NULL == test)	// 여기서의 체크는 아무 의미 없다..
 ## new에 대한 예외 처리 방법 3가지
 * set_new_handler를 통해 할당 에러 처리자를 등록한다.
 
-```cpp
+~~~ cpp
 void outOfMem() {
 	std::cerr << "Unable to satisfy request for memory\n";
 	std::abort();
@@ -38,27 +38,27 @@ int main() {
 
 	int *pBigDataArray = new int[10000000L];
 }
-```
+~~~
 
 * try..catch를 통해 예외를 발생시킨다.
 
-```cpp
+~~~ cpp
 try {
 	char* test = new test[10000000L];
 } catch (std::bad_alloc& exc) {
 	// exception 처리
 }
-```
+~~~
 
 * std::nothrow를 통해 new 할당 실패시 NULL을 리턴하도록 한다.
 
-```cpp
+~~~ cpp
 char* test = new (std::nothrow) test[10000000L];
 if (NULL == test) {	// 위에서와는 다르게 여기서는 NULL 체크가 유효!!
 	// 예외 처리
 	...
 }
-```
+~~~
 
 <br/>
 보다 더 자세한 내용을 원하시면 Effective C++ chapter 49를 참조하시면 됩니다..^^;;
