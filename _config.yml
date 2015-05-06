@@ -9,10 +9,10 @@ twitter_username: kangic
 github_username:  kangic
 
 # Build settings
-#markdown: kramdown
-markdown: redcarpet
-redcarpet:
-    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables"]
+markdown: kramdown
+#markdown: redcarpet
+#redcarpet:
+#    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables"]
 permalink: pretty
 
 safe: true

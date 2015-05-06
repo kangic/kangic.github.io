@@ -21,7 +21,7 @@ categories: vim
 >	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle/
 
 ### Configure bundles (edit .vimrc)
-```
+~~~
 set nocompatible
 filetype off
 
@@ -34,7 +34,7 @@ Bundle 'gmarik/vundle'
 # 여기에 설치하고자 하는 플러그인 리스트를 넣어주면 된다
 
 filetype plugin indent on
-```
+~~~
 
 ### Plugin 설치 
 
@@ -46,7 +46,7 @@ filetype plugin indent on
 
 ### 현재 사용 중인 PluginList
 
-```
+~~~
 Plugin 'superSnipMate'
 Plugin 'matchparenpp'
 Plugin 'cscope.vim'
@@ -73,4 +73,4 @@ Plugin 'tomasr/molokai'    " Not using
 Plugin 'hynek/vim-python-pep8-indent'
 "solarized
 Plugin 'vim-colors-solarized'
-```
+~~~
