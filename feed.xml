@@ -11,6 +11,26 @@ layout: none
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
+
+    {% assign documents = site.wiki | sort: 'updated' | reverse %}
+    {% for doc in documents limit: 100 %}
+    {% if doc.public == true and doc.title != 'wiki'%}
+      <item>
+        <title>{{ doc.title | xml_escape }}</title>
+        <description>{{ doc.summary | xml_escape }}</description>
+        <pubDate>{{ doc.updated | date_to_rfc822 }}</pubDate>
+        <link>{{ doc.url | prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ doc.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        {% for tag in doc.tags %}
+        <category>{{ tag | xml_escape }}</category>
+        {% endfor %}
+        {% for cat in doc.categories %}
+        <category>{{ cat | xml_escape }}</category>
+        {% endfor %}
+      </item>
+    {% endif %}
+    {% endfor %}
+
     {% for post in site.posts limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
